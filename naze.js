@@ -133,9 +133,9 @@ const naze = async (naze, m, msg, store) => {
 		const text = global.q = args.join(' ');
 		const mime = (quoted.msg || quoted).mimetype || ''
 		const qmsg = (quoted.msg || quoted)
-		const author = set.author = global.author || 'Nazedev';
-		const packname = set.packname = global.packname || 'Bot WhatsApp';
-		const botname = set.botname = global.botname || 'Hitori Bot';
+		const author = set.author = global.author || 'Its Anlan';
+		const packname = set.packname = global.packname || 'wintermymine';
+		const botname = set.botname = global.botname || 'Its Winter';
 		const badWordsLower = global.badWords.map(v => v.toLowerCase());
 		const locale_day = moment.tz(global.timezone).locale(global.locale).format('dddd');
 		const date = moment.tz(global.timezone).locale(global.locale).format('DD/MM/YYYY');
@@ -158,9 +158,9 @@ const naze = async (naze, m, msg, store) => {
 		const fkontak = {
 			key: {
 				remoteJid: '0@s.whatsapp.net',
-				participant: '0@s.whatsapp.net',
+				participant: '6283165995953@s.whatsapp.net',
 				fromMe: false,
-				id: 'Naze'
+				id: 'its winter'
 			},
 			message: {
 				contactMessage: {
@@ -1522,9 +1522,9 @@ const naze = async (naze, m, msg, store) => {
 			}
 			break
 			case 'sc': case 'script': {
-				await m.reply(`https://github.com/nazedev/hitori\n⬆️ Itu Sc nya cuy`, {
+				await m.reply(`adaaa dehh`, {
 					title: author,
-					body: 'Subscribe My YouTube',
+					body: 'love winter',
 					thumbnail: global.fake.thumbnail,
 					mediaType: 2,
 					mediaUrl: global.my.yt,
@@ -1535,14 +1535,14 @@ const naze = async (naze, m, msg, store) => {
 						forwardedNewsletterMessageInfo: {
 							newsletterJid: global.my.ch,
 							serverMessageId: null,
-							newsletterName: 'Join For More Info'
+							newsletterName: 'wintermymine'
 						}
 					}
 				})
 			}
 			break
 			case 'donasi': case 'donate': {
-				m.reply('Donasi Dapat Melalui Url Dibawah Ini :\nhttps://saweria.co/naze')
+				m.reply('chat ownerku aja')
 			}
 			break
 			
@@ -1906,7 +1906,7 @@ const naze = async (naze, m, msg, store) => {
 			}
 			break
 			case 'runtime': case 'tes': case 'bot': {
-				if (!args[0] && !args[1]) return m.reply(`*Bot Telah Online Selama*\n*${runtime(process.uptime())}*`);
+				if (!args[0] && !args[1]) return m.reply(`*winter telah online selama*\n*${runtime(process.uptime())}*`);
 				switch(args[0]) {
 					case 'mode': case 'public': case 'self':
 					if (!isCreator) return m.reply(global.mess.owner)
@@ -2055,7 +2055,7 @@ Select Bot Settings:
 				let user = db.users[m.sender]
 				user.afkTime = + new Date
 				user.afkReason = text
-				m.reply(`@${m.sender.split('@')[0]} Telah Afk${text ? ': ' + text : ''}`)
+				m.reply(`@${m.sender.split('@')[0]} telah afk${text ? ': ' + text : ''}`)
 			}
 			break
 			case 'readviewonce': case 'readviewone': case 'rvo': {
@@ -2246,7 +2246,7 @@ Select Bot Settings:
 			case 'cai': case 'roomai': case 'chatai': case 'autoai': {
 				if (m.isGroup) return m.reply(global.mess.private)
 				if (chat_ai[m.sender]) return m.reply(`Kamu Sedang Berada Di Sesi ${command}!`)
-				if (!text) return m.reply(`Example: ${prefix + command} halo ngab\nWith Prompt: ${prefix + command} halo ngab|Kamu adalah assisten yang siap membantu dalam hal apapun yang ku minta.\n\nUntuk Menghapus room: ${prefix + 'del' + command}`)
+				if (!text) return m.reply(`Example: ${prefix + command} halo ngab\nWith Prompt: ${prefix + command} halo ngab|Kamu adalah winter aespa yang siap membantu dalam hal apapun yang ku minta.\n\nUntuk Menghapus room: ${prefix + 'del' + command}`)
 				let [teks1, teks2] = text.split`|`
 				chat_ai[m.sender] = [{ role: 'system', content: teks2 || '' }, { role: 'user', content: text.split`|` ? teks1 : text || '' }]
 				let hasil = await fetchApi('/ai/chat4', {
@@ -3030,17 +3030,17 @@ Select Bot Settings:
 			break
 			case 'play': case 'ytplay': case 'yts': case 'ytsearch': case 'youtubesearch': {
 				if (!text) return m.reply(`Example: ${prefix + command} dj komang`)
-				m.react('⏳')
+				m.react('🌀')
 				try {
 					const res = await yts.search(text);
 					const hasil = pickRandom(res.all)
-					const teksnya = `*📍Title:* ${hasil.title || 'Tidak tersedia'}\n*✏Description:* ${hasil.description || 'Tidak tersedia'}\n*🌟Channel:* ${hasil.author?.name || 'Tidak tersedia'}\n*⏳Duration:* ${hasil.seconds || 'Tidak tersedia'} second (${hasil.timestamp || 'Tidak tersedia'})\n*🔎Source:* ${hasil.url || 'Tidak tersedia'}\n\n_note : jika ingin mendownload silahkan_\n_pilih ${prefix}ytmp3 url_video atau ${prefix}ytmp4 url_video_`;
+					const teksnya = `*📍judul:* ${hasil.title || 'Tidak tersedia'}\n*✏deskripsi:* ${hasil.description || 'Tidak tersedia'}\n*🌟channel:* ${hasil.author?.name || 'Tidak tersedia'}\n*⏳durasi:* ${hasil.seconds || 'Tidak tersedia'} second (${hasil.timestamp || 'Tidak tersedia'})\n*🔎source:* ${hasil.url || 'Tidak tersedia'}\n\n_note : jika ingin mendownload silahkan_\n_pilih ${prefix}ytmp3 url_video atau ${prefix}ytmp4 url_video_`;
 					await m.reply({ image: { url: hasil.thumbnail }, caption: teksnya })
 				} catch (e) {
 					try {
 						const res = await fetchApi('/search/youtube', { query: text });
 						const hasil = pickRandom(res.result.items)
-						const teksnya = `*📍Title:* ${hasil.snippet.title || 'Tidak tersedia'}\n*✏Description:* ${hasil.snippet.description || 'Tidak tersedia'}\n*🌟Channel:* ${hasil.snippet.channelTitle || 'Tidak tersedia'}\n*⏳Duration:* ${hasil.duration || 'Tidak tersedia'}\n*🔎Source:* https://youtu.be/${hasil.id.videoId || 'Tidak tersedia'}\n\n_note : jika ingin mendownload silahkan_\n_pilih ${prefix}ytmp3 url_video atau ${prefix}ytmp4 url_video_`;
+						const teksnya = `*📍judul:* ${hasil.snippet.title || 'Tidak tersedia'}\n*✏deskripsi:* ${hasil.snippet.description || 'Tidak tersedia'}\n*🌟channel:* ${hasil.snippet.channelTitle || 'Tidak tersedia'}\n*⏳durasi:* ${hasil.duration || 'Tidak tersedia'}\n*🔎source:* https://youtu.be/${hasil.id.videoId || 'Tidak tersedia'}\n\n_note : jika ingin mendownload silahkan_\n_pilih ${prefix}ytmp3 url_video atau ${prefix}ytmp4 url_video_`;
 						await m.reply({ image: { url: hasil.snippet.thumbnails.medium.url }, caption: teksnya })
 					} catch (e) {
 						m.reply('Post not available!')
@@ -3067,7 +3067,7 @@ Select Bot Settings:
 			break
 			case 'pinterest': case 'pint': {
 				if (!isLimit) return m.reply(global.mess.limit)
-				if (!text) return m.reply(`Example: ${prefix + command} hu tao`)
+				if (!text) return m.reply(`Example: ${prefix + command} winter aespa`)
 				try {
 					const res = await fetchApi('/search/pinterest', { query: text });
 					const hasil = pickRandom(res.result)
@@ -3131,7 +3131,7 @@ Select Bot Settings:
 			}
 			break
 			case 'spotify': case 'spotifysearch': {
-				if (!text) return m.reply(`Example: ${prefix + command} alan walker alone`)
+				if (!text) return m.reply(`Example: ${prefix + command} aespa LEMONADE`)
 				try {
 					let hasil = await fetchApi('/search/spotify', { query: text });
 					let txt = hasil.result.map(a => {
@@ -4327,7 +4327,7 @@ Select Bot Settings:
 ├ *Money* : ${db.users[m.sender] ? db.users[m.sender].money.toLocaleString('id-ID') : '0'}
 ╰─┬────❍
 ╭─┴─❍「 *BOT INFO* 」❍
-├ *Nama Bot* : ${set?.botname || 'Naze Bot'}
+├ *Nama Bot* : ${set?.botname || 'its winter'}
 ├ *Powered* : @${'0@s.whatsapp.net'.split('@')[0]}
 ├ *Owner* : @${ownerNumber[0].split('@')[0]}
 ├ *Mode* : ${naze.public ? 'Public' : 'Self'}
@@ -4604,7 +4604,7 @@ Select Bot Settings:
 						forwardedNewsletterMessageInfo: {
 							newsletterJid: my.ch,
 							serverMessageId: null,
-							newsletterName: 'Join For More Info'
+							newsletterName: 'wintermymine'
 						}
 					}
 				})
