@@ -13,10 +13,10 @@ const __filename = fileURLToPath(import.meta.url);
 
 //~~~~~~~~~~~~< GLOBAL SETTINGS >~~~~~~~~~~~~\\
 
-global.owner = ["6282113821188"] // ['628','628'] 2 owner atau lebih
-global.author = 'Nazedev'
-global.botname = 'Hitori Bot'
-global.packname = 'Bot WhatsApp'
+global.owner = ["6283165995953"] // ['628','628'] 2 owner atau lebih
+global.author = 'Lin Anlan'
+global.botname = 'Its Winter'
+global.packname = 'by anlan'
 global.timezone = 'Asia/Jakarta' // Ganti pakai command .settimezone
 global.locale = 'en' // Ganti pakai command .setlocale
 global.listprefix = ["+","!","."]
@@ -29,18 +29,18 @@ global.pairing_code = true
 global.number_bot = '' // Kalo pake panel bisa masukin nomer di sini, jika belum ambil session. Format : '628xx'
 
 global.fake = {
-	anonim: 'https://telegra.ph/file/95670d63378f7f4210f03.png',
-	thumbnailUrl: 'https://telegra.ph/file/fe4843a1261fc414542c4.jpg',
+	anonim: 'https://files.catbox.moe/oqgkev.jpg',
+	thumbnailUrl: 'https://files.catbox.moe/vd5c6l.jpg',
 	thumbnail: fs.readFileSync('./src/media/naze.png'),
 	docs: fs.readFileSync('./src/media/fake.pdf'),
 	listfakedocs: ['application/vnd.openxmlformats-officedocument.spreadsheetml.sheet','application/vnd.openxmlformats-officedocument.presentationml.presentation','application/vnd.openxmlformats-officedocument.wordprocessingml.document','application/pdf'],
 }
 
 global.my = {
-	yt: "https://youtube.com/c/Nazedev",
-	gh: "https://github.com/nazedev",
-	gc: "https://chat.whatsapp.com/EqMTCcxdCZgHUJNl5KooCr",
-	ch: "120363250409960161@newsletter"
+	yt: "https://youtube.com/c/aespa",
+	gh: "https://github.com/findzenpeace",
+	gc: "https://instagram.com/its_anlan",
+	ch: "120363250409960101@newsletter"
 }
 
 global.limit = {
@@ -56,22 +56,22 @@ global.money = {
 }
 
 global.mess = {
-	key: "Apikey limit! Silahkan Upgrade: https://naze.biz.id",
-	owner: "Khusus Owner!",
-	admin: "Khusus Admin!",
-	botAdmin: "Bot harus Admin!",
-	onWa: "Nomor tersebut tidak terdaftar di WhatsApp!",
-	group: "Khusus Grup!",
-	private: "Khusus Private Chat!",
-	quoted: "Reply pesannya!",
-	limit: "Limit habis!",
-	prem: "Khusus Premium!",
-	text: "Masukkan teksnya!",
-	media: "Kirim medianya!",
-	wait: "Proses...",
-	fail: "Gagal!",
-	error: "Error!",
-	done: "Selesai!"
+	key: "ituu anuu woii",
+	owner: "gabisa dipake itu untuk anlan",
+	admin: "gabisaa woii fiturnya cuman untuk atmin",
+	botAdmin: "jadiin gue admin woi biar bisa",
+	onWa: "nomor tersebut tidak terdaftar di WhatsApp!",
+	group: "buat di grup doang gabisa di private chat",
+	private: "buat di private chat",
+	quoted: "reply pesannya!",
+	limit: "limit habis!",
+	prem: "khusus Premium!",
+	text: "masukkan teksnya!",
+	media: "kirim medianya!",
+	wait: "tunggu yaa lagii di prosess",
+	fail: "yaa sowry gaygayl",
+	error: "erorr jirr",
+	done: "udah y"
 }
 
 global.APIs = {
@@ -79,8 +79,8 @@ global.APIs = {
 	neosantara: 'https://api.neosantara.xyz/v1',
 }
 global.APIKeys = {
-	'https://api.naze.biz.id': 'nz-298327ff62',
-	'https://api.neosantara.xyz/v1': 'API_KEY_NEOSANTARA_AI',
+	'https://api.naze.biz.id': 'nz-f215b9905f',
+	'https://api.neosantara.xyz/v1': 'nsk_1466b3588d374a059e929ccfd23caddd',
 }
 
 // Lainnya
